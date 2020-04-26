@@ -2,15 +2,12 @@
 #include "Suit.h"
 using namespace std;
 
-
 Suit1::Suit1() {
     // TODO
 }
-
 Suit1::Suit1(Suit _suit) {
   suit = _suit;
 }
-
 int Suit1::getTotalSuits() { return 4; }
 
 string Suit1::getSuit() {
@@ -32,8 +29,6 @@ string Suit1::getSuit() {
       break;
   }
 }
-
-
 Suit* Suit1::getAllSuits() {
   Suit*all = new Suit[4];
   all[0] = Spades;

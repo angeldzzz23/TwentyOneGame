@@ -15,7 +15,7 @@ public:
   string getRank();
   int *getAllRanks();
   void rangeError();
-
+  int getRankAsInt(); // returns the rank 
 };
 
 #endif	/* RANK_H */

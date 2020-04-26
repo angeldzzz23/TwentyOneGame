@@ -8,7 +8,7 @@ Card::Card() {
 Card::Card(int rankType, Suit suitType)
 : rank(rankType), suit(suitType)
 {
-
+  // TODO
 }
 
 string* Card::getAllRankTypes() {
@@ -31,4 +31,8 @@ all[1] = Hearts;
 all[2] = clubs;
 all[3] = diamond;
   return all;
+}
+
+int Card::getRankSize() {
+  return rank.getRankAsInt();
 }

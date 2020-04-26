@@ -48,3 +48,10 @@ int  *Rank::getAllRanks() {
 
   return arrayp;
 }
+
+
+// returns the rank
+int Rank::getRankAsInt() {
+  
+  return rank;
+}

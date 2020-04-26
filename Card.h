@@ -20,6 +20,7 @@ public:
   Suit* getAllSuitTypes();
   string* getAllRankTypes();
   void description();
+  int getRankSize();
   Card(int rankType, Suit suitType); // Constructor
   Card();
 };
