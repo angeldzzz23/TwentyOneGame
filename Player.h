@@ -1,70 +1,31 @@
 /*
- * File:   TwentyOne.h
+ * File:   Player.h
  * Author: Angel Zambrano
  * Created on April 26, 2020, 8:36 PM
- * Specification for the Table
+ * PLayer header file
  */
 
 #ifndef PLAYER_H
 #define PLAYER_H
 #include "Card.h"
+#include <list>
+
 class Player {
 private:
-    string name;
-    int deckSize;
-    list <Card> deck;
+    string name; // name of player
+    int deckSize; // total size of all deck added
+    list <Card> deck; // deck
 public:
-  void addToDeck();
-  list <Card>&getDeck();
-  void addCardToDeck(Card card);
-  void description();
-  void getPlayerNames(string name);
-  Player();
-  Player(string);
-  void setName(string);
-  string getName();
-  int getDeckSize();
-  void setDeckSize(int);
-  void clearDeck();
-
+  list <Card>&getDeck(); // returns the address of deck
+  void addCardToDeck(Card card); // adds card to deck
+  void description(); // displays a descripcion of a card
+  void getPlayerNames(string name); //displays player name
+  Player(); // default constructor
+  Player(string); // constructor with name
+  void setName(string); // sets name
+  string getName(); // returns the name
+  int getDeckSize(); // returns the total size of decks added
+  void setDeckSize(int); // sets the size of the deck
+  void clearDeck(); // clears deck
 };
-
-Player::Player() {
-  setName("Default Name");
-}
-void Player::clearDeck() {
-  deck.clear();
-}
-
-int Player::getDeckSize() {
-  return deckSize;
-}
-
-void Player::setDeckSize(int _deckSize) {
-deckSize = _deckSize;
-}
-
-string Player::getName() {
-  return name;
-}
-
-void Player::setName(string _name) {
-  name = _name;
-}
-
-Player::Player(string _name) {
-  name = _name;
-}
-
-list <Card> &Player:: getDeck() {
-  return deck;
-}
-
-void Player::addCardToDeck(Card card) {
-  deck.push_back(card);
-}
-
-void Player::description() {
-  cout << "Player 1" << endl;
-}
 #endif

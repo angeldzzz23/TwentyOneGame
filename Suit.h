@@ -19,5 +19,7 @@ public:
   std::string getSuit(); // get current suit
   int getTotalSuits(); // returns the int size
   Suit* getAllSuits(); // returns an array of all the types of suits
+  void setSuit(Suit); // ses the suit
+
 };
 #endif	/* TABLE_H */

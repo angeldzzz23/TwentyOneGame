@@ -16,7 +16,7 @@ Card::Card() {
 Card::Card(int rankType, Suit suitType)
 : rank(rankType), suit(suitType)
 {
-  // TODO
+    // Do Nothing
 }
 
 string* Card::getAllRankTypes() {
@@ -41,6 +41,24 @@ all[3] = diamond;
   return all;
 }
 
+// returns the rank size
 int Card::getRankSize() {
   return rank.getRankAsInt();
+}
+
+// sets the card with new suit and rank
+void Card::setCard(Suit1 _suit, Rank _rank)
+{
+  suit = _suit;
+  rank = _rank;
+}
+
+// sets card with new suit
+void Card::setCard(Suit1 _suit) {
+suit = _suit;
+}
+
+// sets card with new rank
+void Card::setCard(Rank _rank){
+  rank = _rank;
 }

@@ -4,6 +4,7 @@
  * Created on April 26, 2020, 8:36 PM
  * Specification for the Table
  */
+ 
 #include <iostream>
 #include "Suit.h"
 using namespace std;
@@ -14,8 +15,10 @@ Suit1::Suit1() {
 Suit1::Suit1(Suit _suit) {
   suit = _suit;
 }
+// return the possible suit
 int Suit1::getTotalSuits() { return 4; }
 
+// returns current suit
 string Suit1::getSuit() {
   switch(suit) {
     case 1:
@@ -35,6 +38,7 @@ string Suit1::getSuit() {
       break;
   }
 }
+// retruns an rray of suits
 Suit* Suit1::getAllSuits() {
   Suit*all = new Suit[4];
   all[0] = Spades;
@@ -42,4 +46,9 @@ Suit* Suit1::getAllSuits() {
   all[2] = clubs;
   all[3] = diamond;
     return all;
+}
+
+// sets the suit
+void Suit1::setSuit(Suit n) {
+  suit = n;
 }

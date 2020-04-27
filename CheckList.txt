@@ -1,0 +1,8 @@
+
+You can find these in TwentyOne.cpp file. 
+Used Link list STL
+   TwentyOne.cpp  to create deck. 
+Shuffling algorithm 
+	shuffle(Card *arr, int size)
+iterators
+ showCurrentDeck() 
