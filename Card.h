@@ -1,9 +1,10 @@
 /*
- * File:   Table.h
- * Author: Dr. Mark E. Lehr
- * Created on January 22nd, 2020, 8:36 PM
+ * File:   TwentyOne.h
+ * Author: Angel Zambrano
+ * Created on April 26, 2020, 8:36 PM
  * Specification for the Table
  */
+
 
 #ifndef Card_h
 #define Card_h

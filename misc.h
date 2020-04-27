@@ -1,5 +1,17 @@
-#include <iostream>
+/*
+ * File:   TwentyOne.h
+ * Author: Angel Zambrano
+ * Created on April 26, 2020, 8:36 PM
+ * Specification for the Table
+ */
 
+
+#include <iostream>
+#include <iomanip>
+#include <stdlib.h>
+#include <time.h>
+#include <stdio.h>
+#include <cstdlib>
 #include <ctype.h>
 
 using namespace std;

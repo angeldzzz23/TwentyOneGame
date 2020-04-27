@@ -1,3 +1,9 @@
+/*
+ * File:   TwentyOne.h
+ * Author: Angel Zambrano
+ * Created on April 26, 2020, 8:36 PM
+ * Specification for the Table
+ */
 #include <iostream>
 #include "Suit.h"
 using namespace std;
