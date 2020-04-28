@@ -11,6 +11,7 @@
  // default constructor
  Player::Player() {
    setName("Default Name");
+   addPlayer("Default Name");
  }
  // clears deck
  void Player::clearDeck() {
@@ -32,10 +33,13 @@
  // sets the name
  void Player::setName(string _name) {
    name = _name;
+
  }
  // default constructor
  Player::Player(string _name) {
    name = _name;
+   setName(name);
+   addPlayer(name);
  }
  // returns the adress of deck
  list <Card> &Player:: getDeck() {
@@ -47,7 +51,7 @@
    deck.push_back(card);
  }
 
-
+ // displays a descripcion of the player
  void Player::description() {
    cout << getName()<< ": " << endl;
    // card iterator
@@ -58,4 +62,33 @@
    }
    cout << '\n';
    cout << "Size of deck added: " << getDeckSize() << endl;
+ }
+
+ stack <string> Player::playerNames;
+
+ // appends player into stack of players
+ void Player::addPlayer(string _name) {
+   // adds player to the top of the stack of player names
+   playerNames.push(_name);
+ }
+
+ // return playerNames
+ stack<string> Player::getPlayerNames() {
+   return playerNames;
+ }
+
+void Player::removePlayerFromStack() {
+  playerNames.pop();
+ }
+
+ // displays the players in a game
+ void  Player::print() {
+   stack <string> s =  playerNames;
+   while (!s.empty())
+   {
+       cout << " " << s.top();
+       s.pop();
+   }
+   cout << '\n';
+
  }
