@@ -34,6 +34,8 @@ return false;
   void TwentyOne::ClearScreen() {
       cout << string( 100, '\n' );
     }
+
+
     // initialize deck with 52 new cards
     // intialize totalDeck
     void TwentyOne::initialiGameState() {
@@ -56,6 +58,10 @@ return false;
 
       // creates array of deck
       initializeDeckOfCardsIntoArray(cardArray, 52);
+
+        for (int i = 0; i < 52; i++) {
+          cardArray[i].description();
+        }
 
         // shuffle
         shuffle(cardArray, 52);

@@ -4,21 +4,26 @@
 #include "TwentyOne.h"
 #include <queue>
 
-
-
 using namespace std;
 
 int main(void) {
+
+
 
   // creating a Queue to store names
   queue <string> names;
   names.push("Angel");
   names.push("David");
 
+
+
+
+
   // initialize A game of twentyOne
-  // TwentyOne n(names.front(), names.back());
+  TwentyOne n(names.front(), names.back());
+
   // setting up initial game state
-  // n.initialiGameState();
+  n.initialiGameState();
   // starting game
   // n.playTwoPlayerGame();
 
@@ -32,6 +37,10 @@ int main(void) {
 
   return 0;
 }
+
+// Set -  Associative container
+
+
 
 
 

@@ -5,6 +5,7 @@
  */
 
 #include "Rank.h"
+#include <map>
 
 // this is the total amount of ranks
 //that can be in a card
@@ -22,20 +23,29 @@ Rank::Rank(int n) {
 }
 
 string Rank::getRank() {
+      // dictionary to map int to numbers
+     map<int, string> numbers;
 
+     // create key value pairs
+     numbers.insert(pair<int, string>(1, "A"));
+     numbers.insert(pair<int, string>(11, "J"));
+     numbers.insert(pair<int, string>(12, "Q"));
+     numbers.insert(pair<int, string>(13, "K"));
+
+  
   if (rank == 1) {
-    return "A";
+    return numbers[1];
   }
   else if (rank >= 1 && rank <= 10) {
     return to_string(rank);
   }
   else { // Face
     if (rank == 11) {
-        return "J";
+        return numbers[11];
       } else if (rank == 12) {
-        return "Q";
+        return numbers[12];
       } else if (rank == 13) {
-        return "K";
+        return numbers[13];
       }
   }
   return "YOU ARE WRONG!";
