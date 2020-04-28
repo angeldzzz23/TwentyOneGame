@@ -2,16 +2,25 @@
 #include <list>
 #include <iterator>
 #include "TwentyOne.h"
+#include <queue>
+
 
 
 using namespace std;
 
 int main(void) {
 
-  // TwentyOne n("Angel", "David");
-  // n.initialiGameState();
-  // n.playTwoPlayerGame();
+  // creating a Queue to store names
+  queue <string> names;
+  names.push("Angel");
+  names.push("David");
 
+  // initialize A game of twentyOne
+  // TwentyOne n(names.front(), names.back());
+  // setting up initial game state
+  // n.initialiGameState();
+  // starting game
+  // n.playTwoPlayerGame();
 
 
 
@@ -30,6 +39,6 @@ int main(void) {
 // TODO
 // Set
 // Map (Dicitionary)
-// Stack // can be how we organize
+//
 // Non Mutating algorithms
 // Use a sorting algorithm
