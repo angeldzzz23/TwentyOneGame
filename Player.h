@@ -16,7 +16,7 @@ class Player {
 private:
     string name; // name of player
     int deckSize; // total size of all deck added
-    list <Card> deck; // deck 
+    list <Card> deck; // deck
     static stack <string> playerNames; // stores all player names
 
 public:

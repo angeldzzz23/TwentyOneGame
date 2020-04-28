@@ -34,10 +34,10 @@ void Card::description() {
 Suit* Card::getAllSuitTypes() {
 
 Suit*all = new Suit[4];
-all[0] = Spades;
-all[1] = Hearts;
-all[2] = clubs;
-all[3] = diamond;
+  all[0] = Spades;
+  all[1] = Hearts;
+  all[2] = clubs;
+  all[3] = diamond;
   return all;
 }
 

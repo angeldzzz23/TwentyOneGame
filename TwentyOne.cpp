@@ -4,7 +4,10 @@
  * Created on April 26, 2020, 7:46 AM
  * Specification for twentyOneGame Class
  */
+#include <algorithm>
+
 #include "TwentyOne.h"
+
 
 TwentyOne::TwentyOne() { // Default constructor
 
@@ -19,14 +22,14 @@ TwentyOne::TwentyOne(string playerOneName, string playerTwo)
 
 // Checks if user entered "\n"
 bool TwentyOne::userDidSkipInstruction() {
-string str;
-getline(cin, str);
+  string str;
+  getline(cin, str);
 
-if (str.length() == 0) {
-    cout << endl << endl << endl;
-    return true;
-}
-return false;
+  if (str.length() == 0) {
+      cout << endl << endl << endl;
+      return true;
+  }
+  return false;
 
 }
 
@@ -34,7 +37,6 @@ return false;
   void TwentyOne::ClearScreen() {
       cout << string( 100, '\n' );
     }
-
 
     // initialize deck with 52 new cards
     // intialize totalDeck
@@ -59,10 +61,6 @@ return false;
       // creates array of deck
       initializeDeckOfCardsIntoArray(cardArray, 52);
 
-        for (int i = 0; i < 52; i++) {
-          cardArray[i].description();
-        }
-
         // shuffle
         shuffle(cardArray, 52);
         // initialize Deck with shuffled Cards
@@ -70,6 +68,10 @@ return false;
           // append card into deck
           deck.push_back(cardArray[i]);
         }
+
+        cout << "here" << endl;
+        showCurrentDeck();
+
 
       // initiaize each player with one card
 
@@ -82,6 +84,7 @@ return false;
       playerDos.addCardToDeck(dealCard());
     }
 
+    // TODO
      // prints out deck using the iterator
      void TwentyOne::showCurrentDeck() {
        // iterator
@@ -93,6 +96,7 @@ return false;
        cout << '\n';
        // prints out the current size of the deck
       cout << totalDeckOfCards << endl;
+
      }
 
      // starts a two placer game when it starts
@@ -383,27 +387,24 @@ return false;
 
     // inttializes array into deck
     void TwentyOne::initializeDeckOfCardsIntoArray(Card *arr, int s) {
-      // TODO
 
       Rank rank;
       Suit1 suit;
 
-      int *ranks; // array of ints
       Suit *suits; // array of suit types
+      int *ranks;
 
-      // getting array of all ranks
-      ranks = rank.getAllRanks();
       // getting array of all suit types
       suits = suit.getAllSuits();
+      ranks = rank.getAllRanks();
 
       // deck size
       int size = 0;
-
       // initialize deck into array
 
       // push new cards into deck
       for (int s = 0; s < 4; s++) {
-        for (int r = 0; r < 13; r++ ) {
+        for (int r = 0; r < *max_element(ranks,ranks+13); r++ ) {
           // add card into deck
           // deck.push_back(Card(r+1, suits[s]));
           arr[size] = Card(r+1, suits[s]);
@@ -414,7 +415,6 @@ return false;
       }
 
       totalDeckOfCards = size;
-
     }
 
     // swaps two variables by  referening

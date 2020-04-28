@@ -1,23 +1,32 @@
+/*
+ * File:   Main.cpp
+ * Author: Angel Zambrano
+ * Created on April 23, 2020
+ * Purpose: start of the program
+ */
+
+// system level libraries
 #include <iostream>
 #include <list>
 #include <iterator>
-#include "TwentyOne.h"
 #include <queue>
+#include <set>
+#include <map>
+using namespace std;  //Library Scope
 
-using namespace std;
+//User Libraries
+#include "TwentyOne.h"
+#include "Card.h"
 
+
+
+//Execution Starts Here
 int main(void) {
-
-
 
   // creating a Queue to store names
   queue <string> names;
   names.push("Angel");
   names.push("David");
-
-
-
-
 
   // initialize A game of twentyOne
   TwentyOne n(names.front(), names.back());
@@ -25,29 +34,8 @@ int main(void) {
   // setting up initial game state
   n.initialiGameState();
   // starting game
-  // n.playTwoPlayerGame();
-
-
-
-// empty() – Returns whether the stack is empty – Time Complexity : O(1)
-// size() – Returns the size of the stack – Time Complexity : O(1)
-// top() – Returns a reference to the top most element of the stack – Time Complexity : O(1)
-// push(g) – Adds the element ‘g’ at the top of the stack – Time Complexity : O(1)
-// pop() – Deletes the top most element of the stack – Time Complexity : O(1)
+  n.playTwoPlayerGame();
 
   return 0;
 }
-
-// Set -  Associative container
-
-
-
-
-
-
-// TODO
-// Set
-// Map (Dicitionary)
-//
-// Non Mutating algorithms
-// Use a sorting algorithm
+//Function Implementations

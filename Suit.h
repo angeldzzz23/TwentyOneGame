@@ -7,9 +7,10 @@
 
 #ifndef SUIT_H
 #define SUIT_H
-
 #include <iostream>
+
 enum Suit {Spades = 1, Hearts, clubs, diamond};
+
 class Suit1 {
 private:
   Suit suit;
@@ -22,4 +23,4 @@ public:
   void setSuit(Suit); // ses the suit
 
 };
-#endif	/* TABLE_H */
+#endif

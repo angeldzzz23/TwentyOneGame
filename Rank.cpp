@@ -6,7 +6,6 @@
 
 #include "Rank.h"
 #include <map>
-
 // this is the total amount of ranks
 //that can be in a card
 int Rank::getAmountOfRanks() { return 13;}
@@ -32,7 +31,6 @@ string Rank::getRank() {
      numbers.insert(pair<int, string>(12, "Q"));
      numbers.insert(pair<int, string>(13, "K"));
 
-  
   if (rank == 1) {
     return numbers[1];
   }
@@ -66,7 +64,6 @@ int *Rank::getAllRanks() {
   }
   return arrayp;
 }
-
 
 // returns the rank
 int Rank::getRankAsInt() {

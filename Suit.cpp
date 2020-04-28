@@ -5,7 +5,6 @@
  * Specification for the Table
  */
 
-#include <iostream>
 #include "Suit.h"
 using namespace std;
 

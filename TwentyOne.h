@@ -6,12 +6,16 @@
  */
  #ifndef TWENTYONE_H
  #define TWENTYONE_H
+
+ // system level libraries
+ #include <iostream>
+ #include <iomanip>
+ #include <algorithm>
+ //User Libraries
  #include "Card.h"
  #include "Player.h"
- #include <iostream>
- #include "Player.h"
  #include "stdlib.h"
- #include <iomanip>
+
 
  class TwentyOne {
  private:
@@ -24,7 +28,6 @@
   TwentyOne(string, string); //
   bool userDidSkipInstruction();
   void ClearScreen();
-
   void showCurrentDeck();
   void initialiGameState(); // sets card size to 52
   void playTwoPlayerGame(); // starts a game

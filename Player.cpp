@@ -7,7 +7,6 @@
 
  #include "Player.h"
 
-
  // default constructor
  Player::Player() {
    setName("Default Name");
@@ -56,6 +55,7 @@
    cout << getName()<< ": " << endl;
    // card iterator
    list <Card> :: iterator it;
+
    // prints out every element in the deck
    for(it = deck.begin(); it != deck.end(); ++it)  {
      it->description();
