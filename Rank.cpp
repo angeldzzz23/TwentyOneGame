@@ -67,7 +67,6 @@ int *Rank::getAllRanks() {
 
   // returns the rank
   int Rank::getRankAsInt() {
-
     return rank;
   }
   // sets the rank

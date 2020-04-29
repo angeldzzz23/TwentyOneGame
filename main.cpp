@@ -18,10 +18,8 @@ using namespace std;  //Library Scope
 #include "TwentyOne.h"
 #include "Card.h"
 
-
 //Execution Starts Here
 int main(void) {
-
   // creating a Queue to store names
   queue <string> names;
   names.push("Angel");

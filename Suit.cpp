@@ -2,7 +2,7 @@
  * File:   TwentyOne.h
  * Author: Angel Zambrano
  * Created on April 26, 2020, 8:36 PM
- * Specification for the Table
+ * Specification for the Suit
  */
 
 #include "Suit.h"

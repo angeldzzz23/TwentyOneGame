@@ -55,12 +55,10 @@ bool TwentyOne::userDidSkipInstruction() {
         playerDos.clearDeck();
         playerDos.setDeckSize(0);
 
-        totalDeckOfCards = 0;
       }
 
       // creates array of deck
       initializeDeckOfCardsIntoArray(cardArray, 52);
-
 
         // shuffle
         shuffle(cardArray, 52);
@@ -159,8 +157,6 @@ bool TwentyOne::userDidSkipInstruction() {
       Card card = deck.front();
       // remove first card from deck
       deck.pop_front();
-      // decrease size of deck
-      totalDeckOfCards--;
       // return the first card from the deck
       return card;
     }
@@ -381,10 +377,10 @@ bool TwentyOne::userDidSkipInstruction() {
 
     // inttializes array into deck
     void TwentyOne::initializeDeckOfCardsIntoArray(Card *arr, int s) {
-
+      // set rank and suit variables to get access to their mehtods
       Rank rank;
       Suit1 suit;
-
+      // set arrays of suit and ranks
       Suit *suits; // array of suit types
       int *ranks;
 
@@ -407,8 +403,6 @@ bool TwentyOne::userDidSkipInstruction() {
         }
         cout << endl;
       }
-
-      totalDeckOfCards = size;
     }
 
     // swaps two variables by  referening

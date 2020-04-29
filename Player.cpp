@@ -2,13 +2,14 @@
  * File:   Player.cpp
  * Author: Angel Zambrano
  * Created on April 26, 2020, 7:30 PM
- * cpp file
+ * Player implementation
  */
 
  #include "Player.h"
 
  // default constructor
  Player::Player() {
+   // gives player a default name
    setName("Default Name");
    addPlayer("Default Name");
  }

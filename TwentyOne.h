@@ -11,6 +11,9 @@
  #include <iostream>
  #include <iomanip>
  #include <algorithm>
+ #include <ctime>        // std::time
+#include <cstdlib>      // std::rand, std::srand
+
  //User Libraries
  #include "Card.h"
  #include "Player.h"
@@ -19,8 +22,6 @@
 
  class TwentyOne {
  private:
-
-    int totalDeckOfCards;
     list <Card> deck;
     Player playerJuan;
     Player playerDos;
@@ -41,7 +42,6 @@
     void initializeDeckOfCardsIntoArray(Card *arr, int s);
     void swap(Card *a, Card *b); // swaps two variables
     void shuffle(Card *arr, int size);
-
  public:
   TwentyOne(); // default constructor
   TwentyOne(string, string); //
@@ -49,5 +49,4 @@
   void playTwoPlayerGame(); // starts a game
   void displayInstructions();
  };
-
-#endif	/* TABLE_H */
+#endif

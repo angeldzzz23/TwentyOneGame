@@ -2,7 +2,7 @@
  * File:   Card.h
  * Author: Angel Zambrano
  * Created on April 23, 2020, 8:12 PM
- * Specification for the Table
+ * Specification for the card
  */
 
 
