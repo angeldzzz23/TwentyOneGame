@@ -11,7 +11,6 @@
 #include <list>
 #include <stack>
 
-
 class Player {
 private:
     string name; // name of player

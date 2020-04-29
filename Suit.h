@@ -10,7 +10,6 @@
 #include <iostream>
 
 enum Suit {Spades = 1, Hearts, clubs, diamond};
-
 class Suit1 {
 private:
   Suit suit;

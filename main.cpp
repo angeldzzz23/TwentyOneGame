@@ -19,7 +19,6 @@ using namespace std;  //Library Scope
 #include "Card.h"
 
 
-
 //Execution Starts Here
 int main(void) {
 
@@ -31,6 +30,9 @@ int main(void) {
   // initialize A game of twentyOne
   TwentyOne n(names.front(), names.back());
 
+
+  // start tutorial 
+  n.displayInstructions();
   // setting up initial game state
   n.initialiGameState();
   // starting game

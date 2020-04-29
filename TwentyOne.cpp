@@ -69,8 +69,6 @@ bool TwentyOne::userDidSkipInstruction() {
           deck.push_back(cardArray[i]);
         }
 
-        cout << "here" << endl;
-        showCurrentDeck();
 
 
       // initiaize each player with one card
@@ -140,12 +138,12 @@ bool TwentyOne::userDidSkipInstruction() {
 
        cout << endl;
        // ask player if they want to play again
-       if (!userDoesNotWantToPlayAgain()) {
+       if (userDoesNotWantToPlayAgain()) {
          // reset cards in initial game state
          initialiGameState();
          // call playTwoPlayerGame
          playTwoPlayerGame();
-       }
+       } 
      }
 
      // displays the current deck of the player

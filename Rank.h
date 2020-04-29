@@ -14,14 +14,15 @@ using namespace std;
 class Rank {
 private:
   int rank;
+  void rangeError(); // displays and extis with an error
 public:
   Rank(int n); // constructor
   Rank(); // default contrustor
   int getAmountOfRanks(); //
   string getRank(); // retruns current rank
   int *getAllRanks(); // retruns an array of rank ints
-  void rangeError(); // displays and extis with an error
   int getRankAsInt(); // returns the rank
   void setRank(int n);
+  void printRanks();
 };
 #endif
