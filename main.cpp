@@ -30,13 +30,42 @@ int main(void) {
   // initialize A game of twentyOne
   TwentyOne n(names.front(), names.back());
 
+ // vector<int> myvector;
+ // myvector.push_back(10);
+ // myvector.push_back(20);
+ // myvector.push_back(30);
 
-  // start tutorial 
-  n.displayInstructions();
+ // list<string> namesss;
+ // namesss.push_back("angel");
+ // namesss.push_back("angel");
+ // namesss.push_back("angel");
+
+
+ // std::cout << "myvector contains:";
+ //  for_each (myvector.begin(), myvector.end(), myfunction);
+ //  std::cout << '\n';
+ //
+ //
+ //  cout << "my link list contains" << endl;
+ //  for_each(namesss.begin(), namesss.end(), myfunction2);
+ //
+ //   list<int> ranks;
+ //
+ //   for (int i=1; i<=13; ++i) ranks.push_back(i);
+ //   for_each(ranks.begin(), ranks.end(), myfunction);
+
+
+
+
+
+
+
+  // start tutorial
+  // n.displayInstructions();
   // setting up initial game state
   n.initialiGameState();
   // starting game
-  n.playTwoPlayerGame();
+  // n.playTwoPlayerGame();
 
   return 0;
 }

@@ -19,6 +19,7 @@
 
  class TwentyOne {
  private:
+    static void helperFunction(Card);
     int totalDeckOfCards;
     list <Card> deck;
     Player playerJuan;
@@ -39,6 +40,7 @@
     void initializeDeckOfCardsIntoArray(Card *arr, int s);
     void swap(Card *a, Card *b); // swaps two variables
     void shuffle(Card *arr, int size);
+
  public:
   TwentyOne(); // default constructor
   TwentyOne(string, string); //

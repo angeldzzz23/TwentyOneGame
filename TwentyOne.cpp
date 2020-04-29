@@ -61,6 +61,7 @@ bool TwentyOne::userDidSkipInstruction() {
       // creates array of deck
       initializeDeckOfCardsIntoArray(cardArray, 52);
 
+
         // shuffle
         shuffle(cardArray, 52);
         // initialize Deck with shuffled Cards
@@ -68,6 +69,10 @@ bool TwentyOne::userDidSkipInstruction() {
           // append card into deck
           deck.push_back(cardArray[i]);
         }
+
+        showCurrentDeck();
+
+
 
 
 
@@ -82,20 +87,17 @@ bool TwentyOne::userDidSkipInstruction() {
       playerDos.addCardToDeck(dealCard());
     }
 
-    // TODO
+    // helps showCurrentDeck with printing the card
+    void TwentyOne::helperFunction(Card n) {
+      n.description();
+    }
+
      // prints out deck using the iterator
      void TwentyOne::showCurrentDeck() {
-       // iterator
-       list <Card> :: iterator it;
-       // prints out every element in the deck
-       for(it = deck.begin(); it != deck.end(); ++it)  {
-         it->description();
-       }
-       cout << '\n';
-       // prints out the current size of the deck
-      cout << totalDeckOfCards << endl;
-
+       // print each card in the deck
+       for_each (deck.begin(), deck.end(), helperFunction);
      }
+
 
      // starts a two placer game when it starts
      void TwentyOne::playTwoPlayerGame() {
@@ -143,7 +145,7 @@ bool TwentyOne::userDidSkipInstruction() {
          initialiGameState();
          // call playTwoPlayerGame
          playTwoPlayerGame();
-       } 
+       }
      }
 
      // displays the current deck of the player

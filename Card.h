@@ -27,5 +27,6 @@ public:
   int getRankSize();
   Card(int rankType, Suit suitType); // Constructor
   Card();
+
 };
 #endif	/* TABLE_H */

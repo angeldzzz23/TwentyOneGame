@@ -84,6 +84,7 @@ void Player::removePlayerFromStack() {
  // displays the players in a game
  void  Player::print() {
    stack <string> s =  playerNames;
+
    while (!s.empty())
    {
        cout << " " << s.top();

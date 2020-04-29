@@ -65,12 +65,35 @@ int *Rank::getAllRanks() {
   return arrayp;
 }
 
-// returns the rank
-int Rank::getRankAsInt() {
+  // returns the rank
+  int Rank::getRankAsInt() {
 
-  return rank;
-}
+    return rank;
+  }
   // sets the rank
   void Rank::setRank(int n) {
     rank = n;
+  }
+
+  void helperFunctionForDisplayingRanks(int i) {  // function:
+
+    if (i == 1) {
+      cout << " "  << "A";
+    } else if (i == 11) {
+      cout << " " << "J";
+    } else if (i == 12) {
+      cout << " " << "Q";
+    } else if (i ==  13) {
+      cout << " " << "K";
+    } else {
+      cout << ' ' << i;
+    }
+  }
+
+  void displayRanks() {
+    // create a ranks list
+    list<int> ranks;
+     //push numbers into ranks
+     for (int i=1; i<=13; ++i) ranks.push_back(i);
+     for_each (ranks.begin(), ranks.end(), helperFunctionForDisplayingRanks);
   }
