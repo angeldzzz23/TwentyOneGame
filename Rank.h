@@ -1,7 +1,7 @@
 /*
  * File:   TwentyOne.h
  * Author: Angel Zambrano
- * Created on April 26, 2020, 10:41 PM
+ * Created on April 26, 2020
  */
 
 #ifndef RANK_H

@@ -1,7 +1,7 @@
 /*
  * File:   TwentyOne.cpp
  * Author: Angel Zambrano
- * Created on April 26, 2020, 7:46 AM
+ * Created on April 26, 2020
  * Specification for twentyOneGame Class
  */
 #include <algorithm>

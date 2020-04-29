@@ -1,7 +1,7 @@
 /*
  * File:   TwentyOne.h
  * Author: Angel Zambrano
- * Created on April 26, 2020, 12:43 AM
+ * Created on April 26, 2020
  * Specification for twentyOneGame Class
  */
  #ifndef TWENTYONE_H
@@ -11,8 +11,6 @@
  #include <iostream>
  #include <iomanip>
  #include <algorithm>
- #include <ctime>        // std::time
-#include <cstdlib>      // std::rand, std::srand
 
  //User Libraries
  #include "Card.h"

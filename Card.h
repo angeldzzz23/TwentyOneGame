@@ -1,7 +1,7 @@
 /*
  * File:   Card.h
  * Author: Angel Zambrano
- * Created on April 23, 2020, 8:12 PM
+ * Created on April 23, 2020
  * Specification for the card
  */
 

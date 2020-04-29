@@ -1,7 +1,7 @@
 /*
  * File:   Player.cpp
  * Author: Angel Zambrano
- * Created on April 26, 2020, 7:30 PM
+ * Created on April 26, 2020
  * Player implementation
  */
 
