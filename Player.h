@@ -22,7 +22,6 @@ public:
   list <Card>&getDeck(); // returns the address of deck
   void addCardToDeck(Card card); // adds card to deck
   void description(); // displays a descripcion of a card
-  void getPlayerNames(string name); //displays player name
   Player(); // default constructor
   Player(string); // constructor with name
   void setName(string); // sets name
@@ -32,7 +31,7 @@ public:
   void clearDeck(); // clears deck
   void addPlayer(string); // add players into stack of players
   stack<string> getPlayerNames(); //
-  void print(); // displays all the player names
+  void displayPlayerNames(); // displays all the player names
   void removePlayerFromStack();
 };
 #endif

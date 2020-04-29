@@ -82,7 +82,7 @@ void Player::removePlayerFromStack() {
  }
 
  // displays the players in a game
- void  Player::print() {
+ void  Player::displayPlayerNames() {
    stack <string> s =  playerNames;
 
    while (!s.empty())

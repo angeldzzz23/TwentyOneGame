@@ -40,7 +40,7 @@ bool TwentyOne::userDidSkipInstruction() {
 
     // initialize deck with 52 new cards
     // intialize totalDeck
-    void TwentyOne::initialiGameState() {
+    void TwentyOne::initialGameState() {
 
       // create a large array to store cards
       Card cardArray[55]; // s
@@ -70,11 +70,6 @@ bool TwentyOne::userDidSkipInstruction() {
           deck.push_back(cardArray[i]);
         }
 
-        showCurrentDeck();
-
-
-
-
 
       // initiaize each player with one card
 
@@ -93,7 +88,7 @@ bool TwentyOne::userDidSkipInstruction() {
     }
 
      // prints out deck using the iterator
-     void TwentyOne::showCurrentDeck() {
+     void TwentyOne::displayCurrentDeck() {
        // print each card in the deck
        for_each (deck.begin(), deck.end(), helperFunction);
      }
@@ -114,13 +109,13 @@ bool TwentyOne::userDidSkipInstruction() {
        cout << "Total cards is " << playerJuan.getDeckSize() << endl << endl;
 
        // ask if player two is ready
-        nextPlayer();
+        pauseGame();
         // clear screen
         ClearScreen();
 
         // show previous player's deck
         cout << "Last player "<<playerJuan.getName()<< ": " << endl;
-        currentUserDeck(playerJuan.getDeck());
+        displayTheDeckOf(playerJuan.getDeck());
         cout << endl;
 
         // displays current player name
@@ -136,20 +131,20 @@ bool TwentyOne::userDidSkipInstruction() {
         cout << playerDos.getName()<< " total size is " <<  playerDos.getDeckSize() << endl;
 
         // display winner
-       winner(playerJuan,playerDos);
+       declareWinner(playerJuan,playerDos);
 
        cout << endl;
        // ask player if they want to play again
        if (userDoesNotWantToPlayAgain()) {
          // reset cards in initial game state
-         initialiGameState();
+         initialGameState();
          // call playTwoPlayerGame
          playTwoPlayerGame();
        }
      }
 
      // displays the current deck of the player
-    void TwentyOne::currentUserDeck(list <Card> player) {
+    void TwentyOne::displayTheDeckOf(list <Card> player) {
       // iterator
       list <Card> :: iterator it;
       // displays each card in the player link list
@@ -176,7 +171,7 @@ bool TwentyOne::userDidSkipInstruction() {
       int userInput; // input can only be
       bool inputIsNotCorrect = true;
 
-      if (playerHasAnAce(player)) {
+      if (anAceIsFoundInPlayer(player)) {
 
         // get input
         do {
@@ -207,8 +202,8 @@ bool TwentyOne::userDidSkipInstruction() {
       return size;
     }
 
-    // the promot of user input
-    bool TwentyOne::decision(list <Card> &player, int userInput) {
+    // the prompt of user input
+    bool TwentyOne::makeDecision(list <Card> &player, int userInput) {
 
       // if userInput is 1. Add a card into its deck
       if (userInput == 1) {
@@ -230,7 +225,7 @@ bool TwentyOne::userDidSkipInstruction() {
       do {
         // print the cards user has
         cout << "Current Deck is: " << endl;
-        currentUserDeck(player);
+        displayTheDeckOf(player);
         cout << endl;
 
         // Ask user what they would like to do
@@ -239,7 +234,7 @@ bool TwentyOne::userDidSkipInstruction() {
         cout << "press 2 if you are satisfied with your dealing" << endl;
         cin >>userInput;
         // call decision function
-        playerIsNotDone = decision(player,userInput);
+        playerIsNotDone = makeDecision(player,userInput);
         ClearScreen();
 
       } while(playerIsNotDone);
@@ -247,10 +242,9 @@ bool TwentyOne::userDidSkipInstruction() {
     }
 
     // loops through the place list if the
-    bool TwentyOne::playerHasAnAce(list <Card> &player) {
-        int cardRank;
+    bool TwentyOne::anAceIsFoundInPlayer(list <Card> &cards) {
         list <Card> :: iterator it;
-        for(it = player.begin(); it != player.end(); ++it) {
+        for(it = cards.begin(); it != cards.end(); ++it) {
           if (it->getRankSize() == 1) {
             return true;
           }
@@ -282,8 +276,8 @@ bool TwentyOne::userDidSkipInstruction() {
     return (userInput ==  1) ? false : false;
     }
 
-    // declares winner
-    void TwentyOne::winner(Player playerOne, Player playerTwo) {
+    // declares declareWinner
+    void TwentyOne::declareWinner(Player playerOne, Player playerTwo) {
       int p1size, p2size;
       int playerOneSize = playerOne.getDeckSize();
       int playerTwoSize = playerTwo.getDeckSize();
@@ -379,7 +373,7 @@ bool TwentyOne::userDidSkipInstruction() {
     }
 
     // pauses the game
-    void TwentyOne::nextPlayer() {
+    void TwentyOne::pauseGame() {
       string k;
       cout << playerDos.getName() << " Press any other key to continue" << endl;
       cin >> k;
